@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Shreyas Sathyamangalam"]
+channels = ['conda-forge']
+name = "kubernetes_course"
+platforms = ['osx-arm64']
+version = "0.1.0"
+exclude-newer = "7d"
+
+[tasks]
+
+[dependencies]
+flask = ">=3.1.3,<4"
