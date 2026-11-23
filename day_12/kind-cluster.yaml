@@ -1,0 +1,17 @@
+# kind-cluster-config.yml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: my-second-cluster
+
+# Specify the kubernetes version by using a specific node image from: https://github.com/kubernetes-sigs/kind/releases
+
+nodes:
+- role: control-plane
+  image: kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5
+  extraPortMappings:
+    - containerPort: 31000    # Port inside the KIND container
+      hostPort: 31000          # Port on the local machine (host system)
+- role: worker
+  image: kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5
+- role: worker
+  image: kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5

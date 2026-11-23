@@ -1,7 +1,7 @@
 # kind-cluster-config.yml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
-
+name: my-first-cluster
 # Specify the kubernetes version by using a specific node image from: https://github.com/kubernetes-sigs/kind/releases
 nodes:
 - role: control-plane
